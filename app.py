@@ -126,9 +126,8 @@ class HallTicketGeneratorApp:
         for i, exam in enumerate(exams):
             c.drawString(width / 2 - 75, schedule_start_y - (15 * (i + 1)), f"{exam['subject']} ({exam['code']}) - {exam['date'].strftime('%Y-%m-%d')}")
 
-        # Remove temporary files after creating the PDF
-        os.remove("temp_photo.jpg")
-        os.remove("temp_qr.png")
+        c.save()
+        os.remove("temp_qr.png")  # Remove the temporary QR code
 
 if __name__ == "__main__":
     root = tk.Tk()
