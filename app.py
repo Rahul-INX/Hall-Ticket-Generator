@@ -92,7 +92,6 @@ class HallTicketGeneratorApp:
         # Check for the uniqueness of the hash code
         if unique_identifier in self.existing_hashes:
             messagebox.showinfo("Duplicate", "A hall ticket with these details has already been generated.")
-            if 
             os.remove('temp_photo.jpg')  # Remove the temporary photo if duplicate
             return
 
